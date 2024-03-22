@@ -1,0 +1,14 @@
+server.port: 5000
+
+spring:
+  application.name: api-gateway
+  cloud:
+    gateway.routes:
+      - id: product-service
+        uri: lb://product-service
+        predicates:
+          - Path=/api/v1/product-service/**
+      - id: rating-service
+        uri: lb://rating-service
+        predicates:
+          - Path=/api/v1/rating-service/**
