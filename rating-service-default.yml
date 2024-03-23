@@ -1,0 +1,14 @@
+server.port: 5002
+
+spring:
+  application.name: rating-service
+  datasource:
+    url: ${DATASOURCE_URL:jdbc:postgresql://localhost:5432/rating_service_db}
+    username: ${DATASOURCE_USERNAME:postgres}
+    password: ${DATASOURCE_PASSWORD:postgres}
+  jpa:
+    hibernate.ddl-auto: none
+    show-sql: true
+
+eureka.client.serviceUrl:
+  defaultZone: ${EUREKA_SERVER_URL:http://localhost:5555}/eureka/
