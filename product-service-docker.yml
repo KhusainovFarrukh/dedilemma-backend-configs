@@ -7,9 +7,10 @@ spring:
     username: postgres
     password: postgres
   jpa:
-    hibernate.ddl-auto: none
-    show-sql: true
-    dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: false
+    hibernate:
+      ddl-auto: none
+      dialect: org.hibernate.dialect.PostgreSQLDialect
 
 eureka.client.serviceUrl:
   defaultZone: http://dedilemma-discovery-server:5555/eureka/

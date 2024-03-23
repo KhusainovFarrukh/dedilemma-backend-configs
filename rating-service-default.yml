@@ -7,9 +7,10 @@ spring:
     username: ${DATASOURCE_USERNAME:postgres}
     password: ${DATASOURCE_PASSWORD:postgres}
   jpa:
-    hibernate.ddl-auto: none
     show-sql: true
-    dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: none
+      dialect: org.hibernate.dialect.PostgreSQLDialect
 
 eureka.client.serviceUrl:
   defaultZone: ${EUREKA_SERVER_URL:http://localhost:5555}/eureka/
