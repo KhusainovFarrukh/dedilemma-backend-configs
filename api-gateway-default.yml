@@ -12,3 +12,6 @@ spring:
         uri: lb://rating-service
         predicates:
           - Path=/api/v1/rating-service/**
+
+eureka.client.serviceUrl:
+  defaultZone: ${EUREKA_SERVER_URL:http://localhost:5555}/eureka/
