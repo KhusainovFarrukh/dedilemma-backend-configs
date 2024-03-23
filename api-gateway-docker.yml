@@ -12,3 +12,6 @@ spring:
         uri: lb://rating-service
         predicates:
           - Path=/api/v1/rating-service/**
+
+eureka.client.serviceUrl:
+  defaultZone: http://dedilemma-discovery-server:5555/eureka/
